@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Crown Plaza Resort</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="logo22.png" alt=""> </a>
+        <ul class="nav-menu">
+          <li> <a href="#about" class="nav-link">Home</a> </li>
+          <li> <a href="contact.html" class="nav-link">Contact</a> </li>
+          <li> <a href="login.html" class="nav-link">Login</a> </li>
+          <li> <a href="signin.html" class="nav-link">Sign up</a> </li>
+        </ul>
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+    hambuger.addEventListener("click", mobileMenu);
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Crown.Plaza.Resort</h1>
+<p > <em>“It’s never too late to become who you want to be. I hope you live a life that you’re proud of, and if you find that you’re not, I hope you have the strength to start over.”</em></p>
+<p> <em>“Each day is a new beginning, the chance to do with it what should be done and not to be seen as simply another day to put in time.”</em></p>
+<button><i>MORE INFO</i></button>
+<br>
+<br>
+      </div>
+      <div class="image">
+        <img src="home44.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="home33.jpg" alt="" class="slide active" onclick="img('home33.jpg')">
+        <img src="home22.jpg" alt="" class="slide" onclick="img('home22.jpg')">
+        <img src="home11.jpeg" alt="" class="slide" onclick="img('home11.jpeg')">
+        <img src="home44.jpg" alt="" class="slide" onclick="img('home44.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Check-in:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>Check-out:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>Adults:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Children:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <input type="submit" value="SEARCH">
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="a1.jpg" alt="" class="image1">
+          <img src="a2.jpg" alt="" class="image2">
+          <img src="a2.jpg" alt="" class="image2">
+          <img src="a2.jpg" alt="" class="image2">
+          <img src="a2.jpg" alt="" class="image2">
+          <img src="a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+          <h2>Welcome to Crown Plaza Resort</h2>
+          <p>Here at Crown Plaza Resort, we embrace our guests with comfort and value, enhancing each stay through the uniqueness of our city and team. Perfect for business and leisure travelers, our Prestigious hotel is a comfortable escape in the heart of downtown GOA.</p>
+          <button class="btn1"><em>READ MORE</em></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+          <h2>Rooms $ Suites</h2>
+        </div>
+        <div class="button">
+          <button class="btn1"><em>VIEW ALL</em></button>
+        </div>
+      </div>
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3> Perimium Rooms :</h3>
+            <p> A perfect fusion of unique design with refined elegance, Premium Room epitomises grandeur and exclusivity.</p>
+            <p> <span>INR</span> 5000 <span>/per night</span></p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3> Super luxary Rooms :</h3>
+            <p>  High-quality furnishings with opulent, expensive touches, attention to aesthetic detail, a quiet room with fresh air, original art on the walls</p>
+            <p> <span>INR</span> 7000 <span>/per night</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3> Presidential Rooms :</h3>
+            <p> Presidential suites may have facilities such as a private conference room, while Royal suites may have a formal reception room instead</p>
+            <p> <span>INR</span> 10000 <span>/per night</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+          <h2>Photo Gallery of Our Hotel</h2>
+        </div>
+        <div class="button">
+          <button class="btn1"><em>VIEW GALLERY</em></button>
+        </div>
+      </div>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="home11.jpeg" alt="">
+        </div>
+        <div class="item">
+          <img src="home22.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="home33.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="home44.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="g8.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        </p>## THANKS FOR FINDING US ##
+        </p>
+        <p>Accepted payment methods</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About our Resort</li>
+          <li>CustomerCare/Service</li>
+          <li>Room Service</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+<br>
+      <div class="box">
+        <h3>Contact Us</h3>
+        <ul>
+          <img src="transparent.jpg" height="40px" width="40px" />
+          <li>Vainguinim Beach, Dona Paula, Panaji, Goa -403004, India</li>
+          <li><i class="far fa-envelope"></i> CrownPlaza@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i> +91 9392678549</li>
+          <li><i class="far fa-phone-alt"></i> +91 9515889569</li>
+          <li><i class="far fa-comments"></i> 24/7 Customer Services</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
